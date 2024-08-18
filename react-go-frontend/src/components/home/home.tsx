@@ -1,7 +1,7 @@
 import React from "react";
 import RowComponent from "../row/row";
 import { LoginLink } from "../../styled-components/table/table";
-import { Outlet } from "react-router-dom";
+import { Outlet, Link } from "react-router-dom";
 
 const Home: React.FC = () => {
   return (
@@ -20,27 +20,39 @@ const Home: React.FC = () => {
           <div className="col-md-2">
             <nav>
               <div className="list-group">
-                <a href="/" className="list-group-item list-group-item-action">
+                <Link to="/" className="list-group-item list-group-item-action">
                   Home
-                </a>
-                <a
-                  href="/movies"
+                </Link>
+                <Link
+                  to="/movies"
                   className="list-group-item list-group-item-action"
                 >
                   Movies
-                </a>
-                <a href="#!" className="list-group-item list-group-item-action">
+                </Link>
+                <Link
+                  to="#!"
+                  className="list-group-item list-group-item-action"
+                >
                   Genres
-                </a>
-                <a href="#!" className="list-group-item list-group-item-action">
+                </Link>
+                <Link
+                  to="#!"
+                  className="list-group-item list-group-item-action"
+                >
                   Add Movie
-                </a>
-                <a href="#!" className="list-group-item list-group-item-action">
+                </Link>
+                <Link
+                  to="#!"
+                  className="list-group-item list-group-item-action"
+                >
                   Manage Catlogue
-                </a>
-                <a href="#!" className="list-group-item list-group-item-action">
+                </Link>
+                <Link
+                  to="#!"
+                  className="list-group-item list-group-item-action"
+                >
                   GraphQL
-                </a>
+                </Link>
               </div>
             </nav>
           </div>
