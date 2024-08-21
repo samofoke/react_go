@@ -10,6 +10,8 @@ import "./index.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import MoviesSection from "./components/movies/movies.tsx";
 import Genres from "./components/genres/genres.tsx";
+import EditMovie from "./components/edit-movie/edit-movie.tsx";
+import ManageCatalogue from "./components/manage-catalogue/manage-catalogue.tsx";
 
 const router = createBrowserRouter([
   {
@@ -20,6 +22,8 @@ const router = createBrowserRouter([
       { index: true, element: <HomeCentral /> },
       { path: "/movies", element: <MoviesSection /> },
       { path: "/genres", element: <Genres /> },
+      { path: "/edit-movie/movie/0", element: <EditMovie /> },
+      { path: "/manage-catalogue", element: <ManageCatalogue /> },
     ],
   },
 ]);

@@ -36,13 +36,13 @@ const Home: React.FC = () => {
                   Genres
                 </Link>
                 <Link
-                  to="#!"
+                  to="/edit-movie/movie/0"
                   className="list-group-item list-group-item-action"
                 >
                   Add Movie
                 </Link>
                 <Link
-                  to="#!"
+                  to="/manage-catalogue"
                   className="list-group-item list-group-item-action"
                 >
                   Manage Catlogue

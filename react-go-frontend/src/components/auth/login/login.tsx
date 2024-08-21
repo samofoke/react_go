@@ -1,12 +1,7 @@
 import React from "react";
 
-const GraphQL: React.FC = () => {
-  return (
-    <>
-      <h2>Graphql structure</h2>
-      <hr />
-    </>
-  );
+const Login: React.FC = () => {
+  return <h2>The Login page</h2>;
 };
 
-export default GraphQL;
+export default Login;
