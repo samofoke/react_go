@@ -30,7 +30,7 @@ const Home: React.FC = () => {
                   Movies
                 </Link>
                 <Link
-                  to="#!"
+                  to="/genres"
                   className="list-group-item list-group-item-action"
                 >
                   Genres

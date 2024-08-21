@@ -9,6 +9,7 @@ import "./index.css";
 // Import Bootstrap CSS
 import "bootstrap/dist/css/bootstrap.min.css";
 import MoviesSection from "./components/movies/movies.tsx";
+import Genres from "./components/genres/genres.tsx";
 
 const router = createBrowserRouter([
   {
@@ -18,6 +19,7 @@ const router = createBrowserRouter([
     children: [
       { index: true, element: <HomeCentral /> },
       { path: "/movies", element: <MoviesSection /> },
+      { path: "/genres", element: <Genres /> },
     ],
   },
 ]);
