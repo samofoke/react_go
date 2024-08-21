@@ -48,7 +48,7 @@ const Home: React.FC = () => {
                   Manage Catlogue
                 </Link>
                 <Link
-                  to="#!"
+                  to="graphql"
                   className="list-group-item list-group-item-action"
                 >
                   GraphQL
