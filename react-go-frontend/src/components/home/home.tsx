@@ -9,7 +9,7 @@ const Home: React.FC = () => {
       <div className="container">
         <RowComponent>
           <div>Go watch a movie</div>
-          <LoginLink href="#!">
+          <LoginLink href="/login">
             <span>Login</span>
           </LoginLink>
         </RowComponent>
