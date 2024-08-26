@@ -1,7 +1,7 @@
 import React from "react";
 import RowComponent from "../row/row";
 import { LoginLink } from "../../styled-components/table/table";
-import HomeCentral from "./home-page/home-central";
+import { Outlet, Link } from "react-router-dom";
 
 const Home: React.FC = () => {
   return (
@@ -9,7 +9,7 @@ const Home: React.FC = () => {
       <div className="container">
         <RowComponent>
           <div>Go watch a movie</div>
-          <LoginLink href="#!">
+          <LoginLink href="/login">
             <span>Login</span>
           </LoginLink>
         </RowComponent>
@@ -20,29 +20,44 @@ const Home: React.FC = () => {
           <div className="col-md-2">
             <nav>
               <div className="list-group">
-                <a href="#!" className="list-group-item list-group-item-action">
+                <Link to="/" className="list-group-item list-group-item-action">
                   Home
-                </a>
-                <a href="#!" className="list-group-item list-group-item-action">
+                </Link>
+                <Link
+                  to="/movies"
+                  className="list-group-item list-group-item-action"
+                >
                   Movies
-                </a>
-                <a href="#!" className="list-group-item list-group-item-action">
+                </Link>
+                <Link
+                  to="/genres"
+                  className="list-group-item list-group-item-action"
+                >
                   Genres
-                </a>
-                <a href="#!" className="list-group-item list-group-item-action">
+                </Link>
+                <Link
+                  to="/edit-movie/movie/0"
+                  className="list-group-item list-group-item-action"
+                >
                   Add Movie
-                </a>
-                <a href="#!" className="list-group-item list-group-item-action">
+                </Link>
+                <Link
+                  to="/manage-catalogue"
+                  className="list-group-item list-group-item-action"
+                >
                   Manage Catlogue
-                </a>
-                <a href="#!" className="list-group-item list-group-item-action">
+                </Link>
+                <Link
+                  to="graphql"
+                  className="list-group-item list-group-item-action"
+                >
                   GraphQL
-                </a>
+                </Link>
               </div>
             </nav>
           </div>
           <div className="col-md-10">
-            <HomeCentral />
+            <Outlet />
           </div>
         </div>
       </div>

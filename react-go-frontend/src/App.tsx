@@ -5,7 +5,6 @@ function App() {
   return (
     <div>
       <Home />
-      {/* <h1>This working super happy</h1> */}
     </div>
   );
 }
