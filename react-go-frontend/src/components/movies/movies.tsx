@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Movie } from "../../interface/movies/movies-interface";
+import { Link } from "react-router-dom";
 
 const MoviesSection: React.FC = () => {
   const [movies, setMovies] = useState<Movie[]>([]);
@@ -23,7 +24,7 @@ const MoviesSection: React.FC = () => {
     },
   ];
 
-  console.log("learning types: ", movieList);
+  // console.log("learning types: ", movieList);
 
   useEffect(() => {
     setMovies(movieList);
@@ -42,6 +43,17 @@ const MoviesSection: React.FC = () => {
               <th>Rating</th>
             </tr>
           </thead>
+          <tbody>
+            {movies.map((mv: any) => (
+              <tr key={mv.id}>
+                <td>
+                  <Link to={`/movies/${mv.id}`}>{mv.title}</Link>
+                </td>
+                <td>{mv.release_date}</td>
+                <td>{mv.mpaa_rating}</td>
+              </tr>
+            ))}
+          </tbody>
         </table>
       </div>
     </>
