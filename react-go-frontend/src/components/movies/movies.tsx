@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
+import { Movie } from "../../interface/movies/movies-interface";
 
 const MoviesSection: React.FC = () => {
-  const [movies, setMovies] = useState([]);
+  const [movies, setMovies] = useState<Movie[]>([]);
 
-  const movieList = [
+  const movieList: Movie[] = [
     {
       id: 1,
       title: "God of War",
@@ -30,9 +31,18 @@ const MoviesSection: React.FC = () => {
 
   return (
     <>
-      <div className="text-center">
+      <div>
         <h2>Movies</h2>
         <hr />
+        <table className="table table-striped table-hover">
+          <thead>
+            <tr>
+              <th>Movie</th>
+              <th>Release Date</th>
+              <th>Rating</th>
+            </tr>
+          </thead>
+        </table>
       </div>
     </>
   );
