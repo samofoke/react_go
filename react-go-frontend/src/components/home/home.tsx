@@ -1,17 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import RowComponent from "../row/row";
 import { LoginLink } from "../../styled-components/table/table";
 import { Outlet, Link } from "react-router-dom";
 
 const Home: React.FC = () => {
+  const [jwtToken, setJwtToken] = useState("");
   return (
     <>
       <div className="container">
         <RowComponent>
           <div>Go watch a movie</div>
-          <LoginLink href="/login">
-            <span>Login</span>
-          </LoginLink>
+          {jwtToken === "" ? (
+            <LoginLink href="/login">
+              <span>Login</span>
+            </LoginLink>
+          ) : (
+            <LoginLink href="/login">
+              <span>Logout</span>
+            </LoginLink>
+          )}
         </RowComponent>
 
         <hr className="mb-3" />
