@@ -14,7 +14,7 @@ import EditMovie from "./components/edit-movie/edit-movie.tsx";
 import ManageCatalogue from "./components/manage-catalogue/manage-catalogue.tsx";
 import GraphQL from "./GraphQL/GraphQL.tsx";
 import Login from "./components/auth/login/login.tsx";
-import Movies from "./components/movies/movie.tsx";
+import MovieComponent from "./components/movies/movie.tsx";
 
 const router = createBrowserRouter([
   {
@@ -24,7 +24,7 @@ const router = createBrowserRouter([
     children: [
       { index: true, element: <HomeCentral /> },
       { path: "/movies", element: <MoviesSection /> },
-      { path: "/movies/:id", element: <Movies /> },
+      { path: "/movies/:id", element: <MovieComponent /> },
       { path: "/genres", element: <Genres /> },
       { path: "/edit-movie/movie/0", element: <EditMovie /> },
       { path: "/manage-catalogue", element: <ManageCatalogue /> },
