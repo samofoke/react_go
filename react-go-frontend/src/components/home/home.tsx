@@ -42,24 +42,28 @@ const Home: React.FC = () => {
                 >
                   Genres
                 </Link>
-                <Link
-                  to="/edit-movie/movie/0"
-                  className="list-group-item list-group-item-action"
-                >
-                  Add Movie
-                </Link>
-                <Link
-                  to="/manage-catalogue"
-                  className="list-group-item list-group-item-action"
-                >
-                  Manage Catlogue
-                </Link>
-                <Link
-                  to="graphql"
-                  className="list-group-item list-group-item-action"
-                >
-                  GraphQL
-                </Link>
+                {jwtToken !== "" && (
+                  <>
+                    <Link
+                      to="/edit-movie/movie/0"
+                      className="list-group-item list-group-item-action"
+                    >
+                      Add Movie
+                    </Link>
+                    <Link
+                      to="/manage-catalogue"
+                      className="list-group-item list-group-item-action"
+                    >
+                      Manage Catlogue
+                    </Link>
+                    <Link
+                      to="graphql"
+                      className="list-group-item list-group-item-action"
+                    >
+                      GraphQL
+                    </Link>
+                  </>
+                )}
               </div>
             </nav>
           </div>
