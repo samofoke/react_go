@@ -1,6 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 
-const Login: React.FC = () => {
+
+interface EmailAnPassword {
+  email: string;
+  password: string;
+}
+
+const Login: React.FC<EmailAnPassword> = ({email, password}) => {
+  const [userEmail, setUserEmail] = useState<string>("")
+
+  console.log("email and password: ", email, password)
   return <h2>The Login page</h2>;
 };
 
