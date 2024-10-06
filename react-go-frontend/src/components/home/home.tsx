@@ -1,17 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import RowComponent from "../row/row";
 import { LoginLink } from "../../styled-components/table/table";
 import { Outlet, Link } from "react-router-dom";
 
 const Home: React.FC = () => {
+  const [jwtToken, setJwtToken] = useState("");
   return (
     <>
       <div className="container">
         <RowComponent>
           <div>Go watch a movie</div>
-          <LoginLink href="/login">
-            <span>Login</span>
-          </LoginLink>
+          {jwtToken === "" ? (
+            <LoginLink href="/login">
+              <span>Login</span>
+            </LoginLink>
+          ) : (
+            <LoginLink href="/login">
+              <span>Logout</span>
+            </LoginLink>
+          )}
         </RowComponent>
 
         <hr className="mb-3" />
@@ -35,24 +42,28 @@ const Home: React.FC = () => {
                 >
                   Genres
                 </Link>
-                <Link
-                  to="/edit-movie/movie/0"
-                  className="list-group-item list-group-item-action"
-                >
-                  Add Movie
-                </Link>
-                <Link
-                  to="/manage-catalogue"
-                  className="list-group-item list-group-item-action"
-                >
-                  Manage Catlogue
-                </Link>
-                <Link
-                  to="graphql"
-                  className="list-group-item list-group-item-action"
-                >
-                  GraphQL
-                </Link>
+                {jwtToken !== "" && (
+                  <>
+                    <Link
+                      to="/edit-movie/movie/0"
+                      className="list-group-item list-group-item-action"
+                    >
+                      Add Movie
+                    </Link>
+                    <Link
+                      to="/manage-catalogue"
+                      className="list-group-item list-group-item-action"
+                    >
+                      Manage Catlogue
+                    </Link>
+                    <Link
+                      to="graphql"
+                      className="list-group-item list-group-item-action"
+                    >
+                      GraphQL
+                    </Link>
+                  </>
+                )}
               </div>
             </nav>
           </div>
