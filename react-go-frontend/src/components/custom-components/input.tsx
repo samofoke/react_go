@@ -1,4 +1,4 @@
-import { forwardRef } from "react";
+import React, { forwardRef } from "react";
 
 interface InputFieldProps {
   name: string;
@@ -10,6 +10,7 @@ interface InputFieldProps {
   value?: string;
   errorDiv?: string;
   errorMsg?: string;
+  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
 const InputField = forwardRef<HTMLInputElement, InputFieldProps>(

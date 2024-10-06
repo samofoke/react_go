@@ -8,6 +8,7 @@ interface EmailAnPassword {
 
 const Login: React.FC<EmailAnPassword> = ({ email, password }) => {
   const [userEmail, setUserEmail] = useState<string>("");
+  const [userPassword, setUserPassword] = useState<string>("");
 
   const handleSubmit = (event: any) => {
     event.preventDefault();
@@ -25,6 +26,8 @@ const Login: React.FC<EmailAnPassword> = ({ email, password }) => {
           type="email"
           className="form-control"
           name="email"
+          autoComplete="email-new"
+          onChange={(event: any) => setUserEmail(event.target.value)}
         />
       </form>
     </div>
