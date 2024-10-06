@@ -29,6 +29,15 @@ const Login: React.FC<EmailAnPassword> = ({ email, password }) => {
           autoComplete="email-new"
           onChange={(event: any) => setUserEmail(event.target.value)}
         />
+
+        <InputField
+          title="Password"
+          type="password"
+          className="form-control"
+          name="password"
+          autoComplete="password-new"
+          onChange={(event: any) => setUserPassword(event.target.value)}
+        />
       </form>
     </div>
   );
