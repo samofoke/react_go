@@ -5,6 +5,7 @@ import { Outlet, Link } from "react-router-dom";
 
 const Home: React.FC = () => {
   const [jwtToken, setJwtToken] = useState("");
+
   return (
     <>
       <div className="container">
@@ -68,7 +69,7 @@ const Home: React.FC = () => {
             </nav>
           </div>
           <div className="col-md-10">
-            <Outlet />
+            <Outlet context={{ jwtToken, setJwtToken }} />
           </div>
         </div>
       </div>
