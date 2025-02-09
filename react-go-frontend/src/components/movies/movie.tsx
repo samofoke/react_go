@@ -4,11 +4,11 @@ import { Movie } from "../../interface/movies/movies-interface";
 
 const MovieComponent: React.FC = () => {
   const [movie, setMovie] = useState<Movie | null>(null);
-  let { id } = useParams();
+  const { id } = useParams();
   console.log("getting the id", id);
 
   useEffect(() => {
-    let dummyData: Movie = {
+    const dummyData: Movie = {
       id: 1,
       title: "God of War",
       release_date: "2001-04-05",
